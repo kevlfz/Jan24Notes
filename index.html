@@ -1,0 +1,31 @@
+<script>
+
+  function onKawara() {
+    document.body.style.backgroundColor = 'black'
+    document.body.style.display = 'grid'
+    document.body.style.justifyContent = 'center'
+    document.body.style.alignItems = 'center'
+    document.body.style.height = '100vh'
+    
+    const d = new Date()
+    const day = d.getDate()
+    const month = d.getMonth()
+    const year = d.getFullYear()
+    
+    const months = [
+      'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+      'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec',
+    ]
+    
+    const div = document.createElement('div')
+    div.textContent =  `${months[month]} ${day}, ${year}`
+    div.style.color = 'white'
+    div.style.fontSize = '10vw'
+    div.style.fontFamily = 'Futura'
+    
+    document.body.appendChild(div)
+  }
+  
+  window.addEventListener('load', onKawara)
+  
+</script>
